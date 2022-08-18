@@ -1,0 +1,14 @@
+["knife", "billete"]
+
+
+
+!python train.py --img 640 --cfg ./models/yolov5s.yaml --hyp hyp.scratch.yaml --batch 8 --epochs 10 --data ./data/knife_data.yaml --weights yolov5s.pt --name yolo_weapon
+
+
+!python detect.py --source D:\Ayaaz\Desktop\yolo_weapon\dataset\test\images_test --weights runs/train/yolo_weapon2/weights/best.pt --conf 0.5 --name yolo_weapon_detect
+
+
+
+
+
+python train.py --img 640 --cfg ./models/yolov5s.yaml --hyp ./data/hyps/hyp.scratch.yaml --batch 16 --epochs 30 --data ../dataset2/dataset.yaml --weights yolov5s.pt --name yolo_weapon_try2
